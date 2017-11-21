@@ -11,18 +11,20 @@ class TestSolveSmallPuzzle(unittest.TestCase):
     def test_solve_puzzle_d(self):
         wire = 'd'
 
-        puzzle = SolvePuzzle(self.file, wire)
+        puzzle = SolvePuzzle(self.file)
+        wire_result = puzzle.solve_puzzle(wire)
 
         self.assertEqual(puzzle.wire_solutions['x'], 123)
         self.assertEqual(puzzle.wire_solutions['y'], 456)
 
-        self.assertEqual(puzzle.wire_result, self.solutions[wire])
+        self.assertEqual(wire_result, self.solutions[wire])
 
     def test_compute_all_values(self):
 
         for wire in self.solutions.keys():
-            puzzle = SolvePuzzle(self.file, wire)
-            self.assertEqual(puzzle.wire_result, self.solutions[wire])
+            puzzle = SolvePuzzle(self.file)
+            wire_result = puzzle.solve_puzzle(wire)
+            self.assertEqual(wire_result, self.solutions[wire])
 
 
 class TestSolvePuzzle(unittest.TestCase):
@@ -32,8 +34,9 @@ class TestSolvePuzzle(unittest.TestCase):
 
     def test_build_tree_all_values(self):
         for wire in self.solutions.keys():
-            puzzle = SolvePuzzle(self.file, wire)
-            self.assertEqual(puzzle.wire_result, self.solutions[wire])
+            puzzle = SolvePuzzle(self.file)
+            wire_result = puzzle.solve_puzzle(wire)
+            self.assertEqual(wire_result, self.solutions[wire])
 
 
 if __name__ == '__main__':

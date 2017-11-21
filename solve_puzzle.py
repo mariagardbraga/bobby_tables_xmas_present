@@ -1,11 +1,10 @@
 class SolvePuzzle:
-    def __init__(self, input_puzzle_file, wire, part_2=None):
+    def __init__(self, input_puzzle_file, part_2=None):
         self.wire_solutions = dict()
         self.input_puzzle = dict()
         self.read_input_puzzle(input_puzzle_file)
         if part_2:
             self.input_puzzle['b'] = [part_2]
-        self.wire_result = self.solve_puzzle(wire)
 
     def solve_puzzle(self, wire):
         """
