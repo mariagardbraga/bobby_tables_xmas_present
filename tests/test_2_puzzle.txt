@@ -1,0 +1,5 @@
+123 -> x
+456 -> y
+y -> o
+n OR o -> m
+x LSHIFT 1 -> n
