@@ -9,9 +9,9 @@ class SolvePuzzle:
 
     def solve_puzzle(self, wire):
         """
-
-        :param wire: wire that
-        :return:
+        this is a recursive function that will solve the problem
+        :param wire: value to be computed
+        :return: value assigned to the wire specified in the parameter
         """
 
         if wire in self.wire_solutions:
